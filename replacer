@@ -1,0 +1,13 @@
+#Implement a function that receives a string and replaces all " symbols
+with ' and vice versa.
+def replacer(s: str) -> str:
+    # Replace all " with a temporary placeholder
+    s = s.replace('"', 'TEMP_DOUBLE_QUOTE')
+
+    # Replace all ' with "
+    s = s.replace("'", '"')
+
+    # Replace the temporary placeholder with '
+    s = s.replace('TEMP_DOUBLE_QUOTE', "'")
+
+    return s
