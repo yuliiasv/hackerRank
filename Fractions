@@ -1,0 +1,9 @@
+#Create a function that takes two parameters of string type which are fractions with the same denominator and returns a sum expression of these fractions and the sum result.
+def get_fractions(a_A, c_C):
+    a_b = a_A.split('/')
+    a_n, a_d = a_b[0], a_b[1]
+    c_b = c_C.split('/')
+    c_n, c_d = c_b[0], c_b[1]
+    n_sum = int(c_n) + int(a_n)
+    out = f'{a_A} + {c_C} = {n_sum}/{a_d}'
+    return out
